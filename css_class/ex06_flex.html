@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: royalblue;
+            /* 부모 요소에 flex를 주면 자식 요소가 가로로 정렬됨 */
+            display: flex;
+            /* wrap: 넘치면 줄바뀜. nowrap: 요소들이 줄어들면서 한줄에 정렬 */
+            /* flex-wrap: wrap; */
+            
+            /* justify-content: flex-start or flex-end or center */
+            /* 배치가 어디서 시작되는지. 부모 너비를 크게 줘야 위치 바뀌는 것 확인 가능 */
+            justify-content: center;
+
+            /* 세로축 기준 정렬
+                flext-start, center, flex-end 줄 수 있음. */
+            align-items: center;
+        }
+        .container .item {
+            width: 100px;
+            /* height를 주지 않으면 부모요소만큼 높이가 늘어남  */
+            height: 100px;
+            border: 3px dashed red;
+            background-color: orange;
+            
+            /* 부모 너비에 채우기 위해 자식 요소 너비가 균등하게 맞춰짐 */
+            flex-grow: 1;
+            
+        }
+        /* 2배 비율을 갖게 됨 */
+        .container .item:nth-child(3) {
+            flex-grow: 3;
+        }
+        .container .item:nth-child(4) {
+            /* 0이면 줄지 않음 */
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

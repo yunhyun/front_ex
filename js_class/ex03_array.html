@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const numbers = [1,2,3,4]
+        const fruits = ['Apple', 'Banana', 'Blueberry']
+        console.log(numbers.length)
+        console.log(fruits.length)
+        console.log([1,2].length)
+
+        // 배열 합침
+        console.log(numbers.concat(fruits))
+
+        // forEach에서 매개변수 확인 
+        fruits.forEach(function(element, index, array){
+            console.log(element, index, array)
+        })
+
+        const a = fruits.forEach(function(fruit, index) {
+            console.log(`${fruit}-${index}`)
+        })
+        // forEach는 반환 내용이 없기 때문에 출력해도 나오는건 없음. 
+        console.log(a)
+
+        const b = fruits.map(function(fruit, index) {
+            return `${fruit}-${index}`
+        })
+        // 콘솔확인해보면 출력 데이터 있음. 새로운 배열을 반환해줌 
+        console.log(b)
+
+        // map을 객체 리터럴 방식으로 해보기 
+        const c = fruits.map(function(fruit, index) {
+            return {
+                id: index, 
+                name: fruit
+            }
+        })
+        // 객체 데이터로 출력됨 
+        console.log(c)
+
+        // map을 객체 리터럴 방식으로 해보기 (화살표함수로)
+        const d = fruits.map((fruit, index) => ({
+            id: index, 
+            name: fruit
+        }))
+        // 객체 데이터로 출력됨 
+        console.log(d)
+
+        const e = numbers.map(number => {
+            return number < 3
+        })
+        // 3보다 작으면 true, 크거나 같으면 false가 저장됨 
+        console.log(e)
+
+        const f = numbers.filter(number => {
+            return number < 3
+        })
+        // 3보다 작은 값만 들어감 
+        console.log(f)
+
+        // 위를 화살표함수로
+        const f1 = numbers.filter(number => number < 3)
+        // 3보다 작은 값만 들어감 
+        console.log(f1)
+
+        // 배열요소 추가 
+        // 제일 뒤에 
+        numbers.push(5)
+        console.log(numbers)
+
+        // 제일 앞에
+        numbers.unshift(0)
+        console.log(numbers)
+
+        numbers.reverse
+        console.log(numbers)
+
+        // 요소 잘라내기 
+        // 2번인덱스부터 1개
+        numbers.splice(2,1)
+        console.log(numbers)
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

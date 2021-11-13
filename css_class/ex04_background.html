@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            /* 가로세로 사이즈 지정하면 해당 사이즈만 이미지 나옴 */
+            background-image: url(../images/스위스.jpg);
+            /* 사이즈를 지정하면 해당 사이즈에 맞게 가로세로 크기만큼 채움
+                지정한 사이즈보다 그림이 작으면 반복되어 나옴 */
+            background-size: 200px;
+            
+            /* 이미지 반복 */
+            /* 반복을 안하면 한번만 나오고 나머지 부분은 배경색이 보임
+                repeat-x: 수평반복
+                repeat-y: 수직반복
+                repeat: 수직,수평반복  */
+            background-repeat: no-repeat;
+            
+            /* 이미지 위치 */
+            /* 중앙에 위치 */
+            /* background-position: center; */
+            /* 우상단 위치 */
+            /* background-position: top right; */
+            /* x축에서 100, y축에서 30 */
+            /* background-position: 100px 30px; */
+            
+            /* 이미지 크기 */
+            /* cover: 가로 세로 중 넓은 쪽으로 맞춤 
+                contain: 가로 세로 중 짧은 쪽으로 맞춤
+                auto: 이밎 실제 크기  */
+            background-size: auto;
+
+            /* 이미지 스크롤 */
+            /* 이미지가 따라서 움직임 */
+            /* background-attachment: scroll; */
+            /* 이미지는 고정되어 있음 */
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
