@@ -1,3 +1,5 @@
+## css, js 예제
+
 ## 노션 참고
 
 1. 블록요소
@@ -96,7 +98,9 @@
              1. scroll: 이미지가 스크롤을 따라서 올라가고 내려감
              2. fixed: 스크롤 움직임에 따라 이미지 보이는 부분이 달라짐
 12. 배치
+
     1. position(요소의 위치 지정 기준)
+
        1. top, bottom, left, right, z-index 속성을 쓸 수 있다.
           1. auto: 브라우저가 계산
           2. px, em, rem 단위 사용 가능
@@ -130,6 +134,7 @@
           2. 헤더나 배너 같은걸 스크롤 움직여도 고정할 때 사용
        6. sticky
           1. 배치 보다는 스크롤 기준
+
     2. 요소 쌓임 순서
        1. position 속성 값이 있으면 위에 쌓임(기본값인 static 제외)
        2. 위의 조건이 같다면 z-index 값이 높을 수록 위에 쌓임
@@ -137,6 +142,7 @@
           1. 나중에 작성된 요소가 위에 쌓인다.
        4. 위의 조건이 다 맞아야 가장 위에 쌓임. 단순히 z-index 값을 999만 준다고 제일 위에 쌓이지 않음.
     3. z-index
+
        1. -1,0, 그리고 양수를 주로 사용
        2. 쌓임 순서 예시 1
 
@@ -145,14 +151,19 @@
        3. 쌓임 순서 예시 2
 
           ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7cc5b04d-65f8-493b-88a8-62199fdb5d49/Untitled.png)
+
     4. absolute, fixed 적용되면 display 속성이 block으로 됨
        1. span 등에 적용하면 block요소가 됨
+
 13. 플렉스(flex)
+
     1. 1차원 레이아웃
     2. flex container
+
        1. flex 요소의 부모는 flex container라고 부름
        2. 부모요소에 flex를 지정해야 요소들에 flex가 지정됨
        3. 사용하는 속성
+
           1. display
              1. flex: 블록요소 처럼 flex container 정의
                 1. container의 너비가 최대한 늘어남
@@ -181,6 +192,7 @@
              4. center : flex items를 가운데 정렬
              5. ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e4de52b-b7f1-46cc-9e41-efa841ebd6fe/Untitled.png)
           6. align-content:
+
              1. 교차 축의 여러 줄 정렬방법
              2. 주축이 가로일 때 세로줄 정렬
              3. item이 두줄 이상으로 표현이 돼야 적용 가능함.
@@ -195,7 +207,9 @@
                 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c59ab2e1-7f41-40b8-a394-6369af68f136/Untitled.png)
 
              9.
+
           7. align-items
+
              1. 교차 축의 한 줄 정렬 방법
              2. 많이 사용하는 방식
              3. stretch : flex items를 시작점으로 정렬
@@ -207,11 +221,15 @@
                 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/546f945d-3b1f-4be2-bf64-805f53a93d49/Untitled.png)
 
              8.
+
     3. flex items
+
        1. flex 요소는 flex items라고 부름
        2. 여기 내용은 container가 아니라 items에 부여하는 속성
        3. 사용하는 속성
+
           1. order
+
              1. 숫자가 작을 수록 먼저 나옴
              2. 구조 바꾸지 않아도 순서 바꿀 수 있음
              3. 기본값은 0
@@ -219,8 +237,10 @@
                 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd59b20a-3e2b-43fa-a002-ed9aeebedb7c/Untitled.png)
 
              4.
+
           2. flex
           3. flex-grow
+
              1. items 요소가 늘어나는 비율
              2. 0이면 증가하는 비율 없음
              3. 1을 주면 균등한 가로 비율을 가짐
@@ -229,7 +249,9 @@
 
              4.
              5.
+
           4. flex-shrink
+
              1. items 요소의 감소 너비 비율
              2. container 너비가 줄면 요소들의 너비도 줄어듦
              3. 기본값 1
@@ -238,6 +260,7 @@
 
              4.
              5.
+
           5. flex-basis
 
              1. items의 공간 배분 전 기본 너비
