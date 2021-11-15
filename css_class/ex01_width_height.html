@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,35 +19,41 @@
 
             background-color: red;
         }
+
         span {
             /* 인라인태그인 span은 
             width, height를 안주면 텍스트 크기만큼만 차지함
             인라인요소는 width, height 못줌. */
             background-color: blue;
         }
+
         /* 내용이 없기 때문에 width, height를 줘야 화면에 보임. */
         .parent {
             width: 300px;
             height: 200px;
             background-color: royalblue;
         }
+
         .child {
             /* width를 안주면 부모요소(여기선 parent class) 크기만큼만 너비를 가짐 */
             height: 100px;
             background-color: orange;
         }
+
         .parent1 {
             width: 300px;
             height: 200px;
             background-color: royalblue;
             font-size: 10px;
         }
+
         .child1 {
             /* em은 부모요소의 폰트 사이즈 기준 */
             width: 10em;
             height: 100px;
             background-color: orange;
         }
+
         .child2 {
             /* rem은 html의 폰트 사이즈 기준. html은 별도로 바꾸지 않으면 16px */
             width: 10rem;
@@ -55,6 +62,7 @@
         }
     </style>
 </head>
+
 <body>
     <div>안녕</div>
     <span>안녕</span>
@@ -66,4 +74,5 @@
         <div class="child2"></div>
     </div>
 </body>
+
 </html>

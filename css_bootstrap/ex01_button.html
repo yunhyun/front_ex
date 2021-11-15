@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/bootstrap.css">
+    <style>
+        #btn {
+            font-weight: 400;
+            /* color: #212529; */
+            text-align: center;
+            /* text-decoration: none; */
+            border: 1px solid ;
+            border-radius: 0.25rem;
+            color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+        }
+    </style>
+    <script>
+        function fun1() {
+            console.log('클릭')
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 부트스트랩을 안쓰면 -->
+    <button onclick="fun1()" id="btn">버튼</button>
+
+    <!-- 부트스트랩을 쓰면 -->
+    <button class="btn btn-primary">버튼</button>
+</body>
+
+</html>

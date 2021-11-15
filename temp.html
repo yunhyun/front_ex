@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwdcheck() {
+            // 입력값을 가져와서 일치하는지 판단 
+            var pwd = document.getElementById('pwd').value;
+            var pwdcheck = document.getElementById('pwdcheck').value;
+            var result = document.getElementById('result');
+            if(pwd == pwdcheck){
+                result.style.color = 'green';
+                result.innerHTML = '일치합니다.';
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = '일치하지 않습니다.';
+            }
+        }
+        function pwCheck() {
+            /* 1. 입력한 id값을 가져오기
+            2. 입력 값 검증(있는지, 글자수)
+            3. 검증결과에 따른 메시지 출력
+            */
+            const pwdValue = document.getElementById('pwd').value;
+            const pwdResult = document.getElementById('pwdResult');
+
+            const pwdLength = pwdValue.length;
+            if (pwdLength == 0) {
+                pwdResult.innerHTML = '필수항목입니다';
+                pwdResult.style.color = 'red';
+            } else if (pwdLength < 8 || pwdLength > 20) {
+                pwdResult.innerHTML = '8~20자 이내로 작성해주세요';
+                pwdResult.style.color = 'red';
+            } else {
+                pwdResult.innerHTML = '좋습니다!';
+                pwdResult.style.color = 'green';
+            }
+        }
+    </script>
+    <style>
+        p{
+            color: red;
+        }
+        span {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        비밀번호입력하지 않으면 '필수항목입니다' 빨간색으로 <br>
+        8자리 미만, 20자리 초과 입력하면 '8~20자리로 입력해주세요' 빨간색으로 <br>
+        8~20자리로 입력하면 '좋습니다' 초록색으로 <br>
+
+        비밀번호 확인 결과는 비밀번호와 비밀번호확인 입력 칸의 값이 같다면 
+        '일치합니다' 초록색으로 <br>
+        값이 같지 않다면 '일치하지 않습니다.' 빨간색으로 <br>
+    </p>
+    비밀번호: <input type="text" id="pwd" placeholder="8~20자리로 입력" onblur="pwCheck()"><br>
+    <span id="pwdResult">여기에 비밀번호 검증결과를 출력합니다.</span> <br>
+    비밀번호확인: <input type="text" id="pwdcheck" onkeyup="pwdcheck()" placeholder="비밀번호 한번 더"><br>
+    <span id="result">여기에 비밀번호 확인결과를 출력합니다.</span><br>
+</body>
+</html>
